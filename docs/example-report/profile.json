@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "dataset": "subscriptions.csv",
+  "rows": 12,
+  "columns_count": 8,
+  "prefix_scan": false,
+  "scan_note": "All rows scanned.",
+  "missing_cells": 8,
+  "missing_pct": 8.33,
+  "incomplete_rows": 6,
+  "duplicate_rows": 1,
+  "columns": [
+    {
+      "name": "customer_id",
+      "dtype": "object",
+      "kind": "text",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 11,
+      "non_missing": 12
+    },
+    {
+      "name": "plan",
+      "dtype": "object",
+      "kind": "text",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "non_missing": 12
+    },
+    {
+      "name": "monthly_spend",
+      "dtype": "float64",
+      "kind": "numeric",
+      "missing": 1,
+      "missing_pct": 8.33,
+      "unique": 4,
+      "non_missing": 11,
+      "infinite": 0,
+      "stats": {
+        "min": 19.0,
+        "median": 59.0,
+        "max": 9999.0,
+        "mean": 969.9090909090909
+      },
+      "iqr_outliers": 1
+    },
+    {
+      "name": "tenure_months",
+      "dtype": "float64",
+      "kind": "numeric",
+      "missing": 2,
+      "missing_pct": 16.67,
+      "unique": 9,
+      "non_missing": 10,
+      "infinite": 0,
+      "stats": {
+        "min": 1.0,
+        "median": 7.0,
+        "max": 36.0,
+        "mean": 11.7
+      },
+      "iqr_outliers": 0
+    },
+    {
+      "name": "support_tickets",
+      "dtype": "float64",
+      "kind": "numeric",
+      "missing": 2,
+      "missing_pct": 16.67,
+      "unique": 7,
+      "non_missing": 10,
+      "infinite": 0,
+      "stats": {
+        "min": 0.0,
+        "median": 2.0,
+        "max": 6.0,
+        "mean": 2.4
+      },
+      "iqr_outliers": 0
+    },
+    {
+      "name": "churned",
+      "dtype": "bool",
+      "kind": "boolean",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "non_missing": 12
+    },
+    {
+      "name": "region",
+      "dtype": "object",
+      "kind": "text",
+      "missing": 3,
+      "missing_pct": 25.0,
+      "unique": 4,
+      "non_missing": 9
+    },
+    {
+      "name": "source",
+      "dtype": "object",
+      "kind": "text",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1,
+      "non_missing": 12
+    }
+  ],
+  "findings": [
+    "monthly_spend: 8.33% missing (1 rows).",
+    "tenure_months: 16.67% missing (2 rows).",
+    "support_tickets: 16.67% missing (2 rows).",
+    "region: 25.0% missing (3 rows).",
+    "source: constant among non-missing values.",
+    "1 duplicate rows beyond the first occurrence."
+  ],
+  "missing_patterns": [
+    {
+      "columns": [
+        "tenure_months",
+        "region"
+      ],
+      "rows": 2
+    },
+    {
+      "columns": [
+        "support_tickets"
+      ],
+      "rows": 2
+    },
+    {
+      "columns": [
+        "monthly_spend"
+      ],
+      "rows": 1
+    },
+    {
+      "columns": [
+        "region"
+      ],
+      "rows": 1
+    }
+  ],
+  "missing_policy": "Pandas default NA tokens, whitespace-only fields, and supplied --na tokens.",
+  "ai": {
+    "status": "disabled"
+  }
+}

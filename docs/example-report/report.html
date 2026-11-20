@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DatasetBrief — subscriptions.csv</title>
+<style>
+*{box-sizing:border-box}body{font:16px/1.6 Inter,system-ui,sans-serif;margin:0;background:#f3f5f3;color:#20372d}
+main{max-width:1120px;margin:auto;padding:48px 24px}h1{font-size:clamp(28px,4vw,46px);line-height:1.2;overflow-wrap:anywhere}
+h2{font-size:21px}h3{font-size:16px}p{max-width:85ch}.brand{font-size:14px;letter-spacing:.08em;font-weight:700}
+.muted,.card span{color:#586c62}.cards{display:flex;gap:12px;flex-wrap:wrap}
+.card,section{background:white;border:1px solid #d9e2dc;border-radius:12px;padding:22px}
+.card{flex:1;min-width:145px}.card strong{display:block;font-size:28px}section{margin-top:20px}
+.bar-row{display:grid;grid-template-columns:minmax(80px,1fr) 2fr 65px;gap:16px;align-items:center;margin:12px 0}
+.bar-row span{overflow-wrap:anywhere}meter{width:100%;height:20px;accent-color:#278261}
+.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #e5ebe6;vertical-align:top}td{max-width:320px;overflow-wrap:anywhere}
+th{white-space:nowrap}li{margin-bottom:8px}footer{margin-top:24px;font-size:13px;color:#586c62}
+@media print{body{background:white}main{padding:0}section,.card{break-inside:avoid}}
+</style><main><div class="brand">DatasetBrief</div><h1>subscriptions.csv</h1>
+<p class="muted">All rows scanned. Statistics describe the loaded rows.</p>
+<div class="cards"><div class='card'><span>Rows scanned</span><strong>12</strong></div><div class='card'><span>Columns</span><strong>8</strong></div><div class='card'><span>Missing cells</span><strong>8.3%</strong></div><div class='card'><span>Incomplete rows</span><strong>6</strong></div><div class='card'><span>Duplicate rows</span><strong>1</strong></div></div>
+<section><h2>AI interpretation</h2><p>Run with --ai-model to add an AI explanation using an Ollama model.</p></section>
+<section><h2>Missing values by column</h2><div class='bar-row'><span>customer_id</span><meter min='0' max='100' value='0.0' aria-label='customer_id missing percentage'></meter><strong>0.0%</strong></div><div class='bar-row'><span>plan</span><meter min='0' max='100' value='0.0' aria-label='plan missing percentage'></meter><strong>0.0%</strong></div><div class='bar-row'><span>monthly_spend</span><meter min='0' max='100' value='8.33' aria-label='monthly_spend missing percentage'></meter><strong>8.3%</strong></div><div class='bar-row'><span>tenure_months</span><meter min='0' max='100' value='16.67' aria-label='tenure_months missing percentage'></meter><strong>16.7%</strong></div><div class='bar-row'><span>support_tickets</span><meter min='0' max='100' value='16.67' aria-label='support_tickets missing percentage'></meter><strong>16.7%</strong></div><div class='bar-row'><span>churned</span><meter min='0' max='100' value='0.0' aria-label='churned missing percentage'></meter><strong>0.0%</strong></div><div class='bar-row'><span>region</span><meter min='0' max='100' value='25.0' aria-label='region missing percentage'></meter><strong>25.0%</strong></div><div class='bar-row'><span>source</span><meter min='0' max='100' value='0.0' aria-label='source missing percentage'></meter><strong>0.0%</strong></div>
+<p class="muted">Pandas default NA tokens, whitespace-only fields, and supplied --na tokens.</p></section>
+<section><h2>Quality findings</h2><ul><li>monthly_spend: 8.33% missing (1 rows).</li><li>tenure_months: 16.67% missing (2 rows).</li><li>support_tickets: 16.67% missing (2 rows).</li><li>region: 25.0% missing (3 rows).</li><li>source: constant among non-missing values.</li><li>1 duplicate rows beyond the first occurrence.</li></ul>
+</section><section><h2>Missingness patterns</h2><ul><li>tenure_months, region missing together in 2 rows.</li><li>support_tickets missing together in 2 rows.</li><li>monthly_spend missing together in 1 rows.</li><li>region missing together in 1 rows.</li></ul>
+<p class="muted">Up to ten most frequent patterns. Each row contributes to one pattern. These patterns do not establish why data is missing.</p>
+</section><section><h2>Column profile</h2><div class="scroll"><table>
+<thead><tr><th>Column</th><th>Type</th><th>Present</th><th>Unique</th><th>Missing</th>
+<th>Min / Median / Max</th><th>Notes</th></tr></thead><tbody><tr><td>customer_id</td><td>text</td><td>12</td><td>11</td><td>0 (0.0%)</td><td>—</td><td>—</td></tr><tr><td>plan</td><td>text</td><td>12</td><td>3</td><td>0 (0.0%)</td><td>—</td><td>—</td></tr><tr><td>monthly_spend</td><td>numeric</td><td>11</td><td>4</td><td>1 (8.3%)</td><td>19 / 59 / 9999</td><td>1 outside 1.5×IQR</td></tr><tr><td>tenure_months</td><td>numeric</td><td>10</td><td>9</td><td>2 (16.7%)</td><td>1 / 7 / 36</td><td>—</td></tr><tr><td>support_tickets</td><td>numeric</td><td>10</td><td>7</td><td>2 (16.7%)</td><td>0 / 2 / 6</td><td>—</td></tr><tr><td>churned</td><td>boolean</td><td>12</td><td>2</td><td>0 (0.0%)</td><td>—</td><td>—</td></tr><tr><td>region</td><td>text</td><td>9</td><td>4</td><td>3 (25.0%)</td><td>—</td><td>—</td></tr><tr><td>source</td><td>text</td><td>12</td><td>1</td><td>0 (0.0%)</td><td>—</td><td>—</td></tr>
+</tbody></table></div><p class="muted">Numeric summaries exclude infinite values. IQR flags are descriptive, not proof of invalid data.
+Text columns may contain dates or categories. Unique values alone do not establish an identifier.</p></section>
+<footer>Generated locally with DatasetBrief. Counts are computed by pandas. AI receives column names and aggregate statistics when enabled.</footer>
+</main></html>

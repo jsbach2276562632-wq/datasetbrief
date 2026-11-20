@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datasetbrief"
+version = "0.1.0"
+description = "Understand a tabular dataset with local profiling and optional AI explanations."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2,<4"]
+license = "MIT"
+
+[project.scripts]
+datasetbrief = "datasetbrief.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["datasetbrief*"]

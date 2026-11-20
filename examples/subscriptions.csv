@@ -1,0 +1,13 @@
+customer_id,plan,monthly_spend,tenure_months,support_tickets,churned,region,source
+C001,basic,19,2,3,true,North,web
+C002,pro,59,14,0,false,South,web
+C003,basic,,1,5,true,North,web
+C004,pro,59,24,1,false,,web
+C005,enterprise,199,36,0,false,West,web
+C006,basic,19,3,2,false,East,web
+C007,pro,59,,4,true,,web
+C008,basic,19,,6,true,,web
+C009,enterprise,199,18,1,false,South,web
+C010,basic,19,5,,false,West,web
+C010,basic,19,5,,false,West,web
+C011,pro,9999,9,2,false,East,web
